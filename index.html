@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Guía interactiva fisioterapéutica para docentes</title>
+<title>¡Muévete, Profe! Guía interactiva para docentes</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f1f7f6;--card:#fff;--ink:#12353b;--mut:#4f6f74;--pri:#0f6e72;--acc:#f2a93b;--soft:#d9eeec;--line:#cfe3e1;--hero:#0c3b40;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--bg:#f3f8ff;--card:#fff;--ink:#12353b;--mut:#4f6f74;--pri:#0a8f9c;--acc:#ff9f1c;--soft:#e1f3f8;--line:#cfe3e1;--hero:#0c3b40;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1f22;--card:#12303a;--ink:#e6f3f2;--mut:#9ec0c3;--pri:#4fc3bd;--acc:#f2b24f;--soft:#17414a;--line:#25535c;--hero:#082a2e}}
 :root[data-theme="dark"]{--bg:#0b1f22;--card:#12303a;--ink:#e6f3f2;--mut:#9ec0c3;--pri:#4fc3bd;--acc:#f2b24f;--soft:#17414a;--line:#25535c;--hero:#082a2e}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -74,17 +74,55 @@ footer{background:var(--hero);color:#b5d6d4;padding:30px 0;font-size:14px}
 @media(prefers-reduced-motion:reduce){.pose .arr path{animation:none}*{transition:none!important;scroll-behavior:auto!important}}
 #print{display:none}#print a{color:var(--pri);font-weight:700}
 @media print{*{-webkit-print-color-adjust:exact;print-color-adjust:exact}body{font-size:14px}#ejercicios,.tabs,.btn,.hero svg,#mapinfo{display:none!important}#print{display:block!important}.mapbox{grid-template-columns:1fr}section{padding:20px 0}.pg{break-before:page}.pe{break-inside:avoid;margin:14px 0}.pe ol{margin:6px 0;padding-left:22px}.hero .wrap{grid-template-columns:1fr}}
+
+:root{--seg:#6c4ff0}
+header.hero{background:linear-gradient(135deg,#0a2f4a 0%,#0a8f9c 55%,#6c4ff0 100%)}
+header.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 88% 18%,rgba(255,183,3,.35),transparent 42%),radial-gradient(circle at 8% 95%,rgba(255,107,94,.35),transparent 42%)}
+.hero .wrap{position:relative}.hero h1 span{display:block;font-size:.55em;color:#ffd166;margin-top:8px;font-weight:700}
+.authors{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}.au{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 14px;font-weight:700;font-size:15px;color:#fff}
+.uni{font-size:15px;color:#ffe08a;font-weight:700;margin-bottom:22px}
+.hn{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.hn a{color:#fff;text-decoration:none;font-size:14px;font-weight:700;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:5px 13px}.hn a:hover{background:rgba(255,255,255,.18)}
+section h2::after{content:"";display:block;width:70px;height:6px;border-radius:6px;margin-top:10px;background:linear-gradient(90deg,#e8503f,#ffb703,#0c8f72,#6c4ff0)}
+.fact{border-top:6px solid var(--c)}.fact:nth-child(1){--c:#e8503f}.fact:nth-child(2){--c:#ffb703}.fact:nth-child(3){--c:#0c8f72}.fact:nth-child(4){--c:#6c4ff0}
+.og{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.ocard{background:linear-gradient(135deg,#0a8f9c,#6c4ff0);color:#fff;border-radius:20px;padding:26px}.ocard span{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:20px;color:#ffd166}.ocard p{margin:10px 0 0}
+.spec{list-style:none;margin:0;padding:0;counter-reset:n;display:grid;gap:12px}.spec li{counter-increment:n;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px 14px 58px;position:relative}
+.spec li::before{content:counter(n);position:absolute;left:14px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--c);color:#fff;font-weight:800;display:grid;place-items:center}
+.spec li:nth-child(1){--c:#e8503f}.spec li:nth-child(2){--c:#0c8f72}.spec li:nth-child(3){--c:#6c4ff0}
+.hot[data-s=cuello] circle{fill:#6c4ff0}.hot[data-s=hombro] circle{fill:#e8503f}.hot[data-s=espalda] circle{fill:#0c8f72}.hot[data-s=rodilla] circle{fill:#1b74d1}.hot.on circle{stroke:var(--ink);stroke-width:4}
+.tab{border-color:var(--tc)}.tab[aria-selected="true"]{background:var(--tc);border-color:var(--tc);color:#fff}
+.seginfo{background:color-mix(in srgb,var(--seg) 14%,var(--card));border-left:8px solid var(--seg)}
+.ex{border-left:6px solid var(--seg)}.ex.done{border-color:var(--line);border-left-color:var(--seg)}
+.ico{background:color-mix(in srgb,var(--seg) 16%,var(--card))}.ico svg{stroke:var(--seg)}
+.chip{background:color-mix(in srgb,var(--seg) 16%,var(--card))}.stepno{color:var(--seg)}.dots i.a{background:var(--seg)}
+.sm{color:var(--seg);border-color:var(--seg)}.sm.fill{background:var(--seg);color:#fff}.bar i{background:var(--seg)}
+.pose .ln{stroke:var(--seg)}.pose .hd{fill:var(--seg)}.tip{border-left-color:var(--seg)}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+.card{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--c);border-radius:16px;padding:18px;text-align:left;color:var(--ink);font:inherit}
+.card .em{font-size:30px;display:block}.card b{font-family:"Bricolage Grotesque",sans-serif;font-size:18px;display:block;margin:4px 0}.card span.t{color:var(--mut);font-size:15px}
+button.card{cursor:pointer;transition:transform .2s}button.card:hover{transform:translateY(-3px)}
+.soft{background:linear-gradient(180deg,#fff3e0,#e9f5ff)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .soft{background:var(--soft)}}
+.steps5{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.steps5 div{flex:1 1 170px;background:var(--card);border-radius:16px;padding:14px;border-bottom:6px solid var(--c)}.steps5 b{display:block;color:var(--c);font-family:"Bricolage Grotesque",sans-serif}
+.vh{margin:26px 0 0;font-size:21px}
+.vid a{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:14px;padding:12px 14px}
+.vid small{display:block;color:var(--mut)}.play{flex:none;width:46px;height:32px;background:#ff0033;border-radius:9px;position:relative}.play::after{content:"";position:absolute;left:18px;top:9px;border-left:12px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent}
+.titfin{background:linear-gradient(135deg,#0a2f4a,#6c4ff0);color:#fff;border-radius:22px;padding:28px;text-align:center}.titfin small{color:#ffd166;font-weight:700;display:block;margin-bottom:8px}.titfin h3{font-size:clamp(20px,3vw,28px)}.titfin p{margin:10px 0 0;color:#d8e6ff}
+@media(max-width:720px){.og{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header class="hero"><div class="wrap">
 <div>
-<div class="tag">Proyecto de investigación · Fisioterapia</div>
-<h1>Guía interactiva fisioterapéutica para la promoción de la salud y prevención de síntomas musculoesqueléticos en docentes</h1>
-<p>Institución Educativa de Puerto Rico, Tiquisio, Bolívar. Ejercicios sencillos para cuello, hombro, espalda baja y rodillas, que puedes hacer en el salón, en la sala de profesores o en casa.</p>
+<div class="tag">Proyecto de investigación · Fisioterapia · Universidad de Pamplona</div>
+<h1>¡Muévete, Profe!<span>Tu cuerpo también enseña</span></h1>
+<p>Guía interactiva de ejercicios para aliviar y prevenir el dolor de cuello, hombro, espalda baja y rodillas en los docentes de la Institución Educativa de Puerto Rico, Tiquisio, Bolívar.</p>
+<div class="authors"><span class="au">Gesselly Rojas Díaz</span><span class="au">Angies Milena Medina Ovallos</span><span class="au">Juliana Llanos Pabón</span></div>
+<div class="uni">Estudiantes de IV semestre de Fisioterapia · Universidad de Pamplona</div>
 <a class="btn" href="#intro">Comenzar la guía</a>
+<nav class="hn"><a href="#objetivo">Objetivo</a><a href="#zonas">Zonas</a><a href="#ejercicios">Ejercicios</a><a href="#pausa">Pausa activa</a><a href="#ergo">Ergonomía</a><a href="#videos">Videos</a></nav>
 </div>
-<svg viewBox="0 0 200 280" aria-hidden="true"><circle cx="100" cy="140" r="120" fill="#17575c"/><g fill="none" stroke="#f2a93b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><circle cx="100" cy="60" r="20" fill="#f2a93b"/><path d="M100 82v78M62 108h76M100 160l-26 78M100 160l26 78"/></g></svg>
+<svg viewBox="0 0 200 280" aria-hidden="true"><defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb703"/><stop offset="1" stop-color="#e8503f"/></linearGradient></defs><circle cx="100" cy="140" r="122" fill="rgba(255,255,255,.12)"/><circle cx="100" cy="140" r="96" fill="rgba(255,255,255,.1)"/><g fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><circle cx="100" cy="58" r="20" fill="url(#hg)"/><path d="M100 82v78M62 108h76M62 108l-8 56M138 108l8 56M100 160l-26 78M100 160l26 78"/></g><g stroke="#fff" stroke-width="3"><circle cx="100" cy="84" r="9" fill="#6c4ff0"/><circle cx="62" cy="108" r="9" fill="#e8503f"/><circle cx="138" cy="108" r="9" fill="#e8503f"/><circle cx="100" cy="140" r="9" fill="#0c8f72"/><circle cx="87" cy="200" r="9" fill="#1b74d1"/><circle cx="113" cy="200" r="9" fill="#1b74d1"/></g></svg>
 </div></header>
 
 <section id="intro"><div class="wrap">
@@ -99,7 +137,8 @@ footer{background:var(--hero);color:#b5d6d4;padding:30px 0;font-size:14px}
 </div>
 </div></section>
 
-<section style="background:var(--card)"><div class="wrap">
+<section id="objetivo"><div class="wrap"><h2>Objetivo</h2><div class="og"><div class="ocard"><span>🎯 Objetivo general</span><p>Orientar a los docentes de la Institución Educativa de Puerto Rico, Tiquisio, Bolívar, mediante una guía interactiva de ejercicios fisioterapéuticos, para promover la salud y prevenir síntomas musculoesqueléticos en cuello, hombro, espalda baja y rodillas.</p></div><ol class="spec"><li><b>Identificar</b> las zonas del cuerpo con mayor sintomatología en los docentes.</li><li><b>Enseñar</b> ejercicios de estiramiento, movilidad y fortalecimiento fáciles de entender y ejecutar.</li><li><b>Fomentar</b> hábitos de pausas activas y posturas saludables durante la jornada escolar.</li></ol></div></div></section>
+<section id="zonas" style="background:var(--card)"><div class="wrap">
 <h2>¿Dónde sientes más molestia?</h2>
 <p class="lead">Toca una zona del cuerpo para ir a sus ejercicios.</p>
 <div class="mapbox">
@@ -124,8 +163,16 @@ footer{background:var(--hero);color:#b5d6d4;padding:30px 0;font-size:14px}
 <ul><li>Haz un calentamiento suave: camina un minuto o mueve los brazos.</li><li>Respira de forma tranquila; no sostengas el aire.</li><li>Detente si sientes dolor agudo, hormigueo, mareo o entumecimiento.</li><li>Si el dolor persiste más de una semana, consulta con un profesional de la salud.</li></ul></div>
 </div></section>
 
+<section id="pausa" class="soft"><div class="wrap"><h2>Pausa activa de 5 minutos</h2><p class="lead">Una rutina rápida para hacer entre clases, de pie y sin material. Puedes repetirla 2 o 3 veces al día.</p>
+<div class="steps5"><div style="--c:#0c8f72"><b>1 · Respira</b>4 respiraciones profundas, inflando el abdomen.</div><div style="--c:#6c4ff0"><b>2 · Cuello</b>Inclinación lateral, 20 s por lado.</div><div style="--c:#e8503f"><b>3 · Hombros</b>10 círculos atrás y 10 adelante.</div><div style="--c:#0c8f72"><b>4 · Espalda</b>Manos en la cintura, inclínate atrás suave 5 s.</div><div style="--c:#1b74d1"><b>5 · Piernas</b>Estiramiento de muslo, 20 s por pierna.</div></div></div></section>
+<section><div class="wrap"><h2>Tu plan de la semana</h2><p class="lead">Un segmento por día, de 10 a 15 minutos. Toca un día para ir a sus ejercicios.</p>
+<div class="grid4"><button class="card" data-go="cuello" style="--c:#6c4ff0"><span class="em">📅</span><b>Lunes · Cuello</b><span class="t">Alivia la nuca tras el fin de semana.</span></button><button class="card" data-go="hombro" style="--c:#e8503f"><span class="em">📅</span><b>Martes · Hombro</b><span class="t">Abre el pecho y suelta los hombros.</span></button><button class="card" data-go="espalda" style="--c:#0c8f72"><span class="em">📅</span><b>Miércoles · Espalda baja</b><span class="t">Movilidad y fuerza para la zona lumbar.</span></button><button class="card" data-go="rodilla" style="--c:#1b74d1"><span class="em">📅</span><b>Jueves · Rodillas</b><span class="t">Fortalece el muslo y protege la rodilla.</span></button><div class="card" style="--c:#ffb703"><span class="em">⭐</span><b>Viernes · Repaso</b><span class="t">Repite tus ejercicios favoritos y haz la pausa activa.</span></div></div></div></section>
+<section id="ergo" class="soft"><div class="wrap"><h2>Cuida tu postura en el aula</h2><p class="lead">Pequeños cambios diarios que complementan los ejercicios.</p>
+<div class="grid4"><div class="card" style="--c:#6c4ff0"><span class="em">🪑</span><b>Sentado</b><span class="t">Espalda apoyada, pies firmes en el piso y rodillas a unos 90°.</span></div><div class="card" style="--c:#e8503f"><span class="em">🧍</span><b>De pie</b><span class="t">Reparte el peso en ambos pies, alterna el apoyo y no bloquees las rodillas.</span></div><div class="card" style="--c:#0c8f72"><span class="em">📝</span><b>Al escribir en el tablero</b><span class="t">Escribe a la altura de los hombros y evita estirar el cuello hacia arriba.</span></div><div class="card" style="--c:#1b74d1"><span class="em">🎒</span><b>Al cargar materiales</b><span class="t">Pégalos al cuerpo, flexiona las rodillas al agacharte y reparte el peso.</span></div><div class="card" style="--c:#ffb703"><span class="em">📱</span><b>Celular y cuadernos</b><span class="t">Sube el celular o el material a la altura de los ojos para no encorvar el cuello.</span></div><div class="card" style="--c:#14a3b8"><span class="em">💧</span><b>Pausas e hidratación</b><span class="t">Levántate y muévete cada 45 a 60 minutos, y toma agua con frecuencia.</span></div></div></div></section>
+<section id="videos"><div class="wrap"><h2>Videos de apoyo</h2><p class="lead">Mira cómo se hace cada ejercicio. Cada botón abre en YouTube una búsqueda con videos de ese ejercicio. Elige siempre videos de fisioterapeutas o canales de salud confiables.</p><div id="vids"></div></div></section>
+<section><div class="wrap"><div class="titfin"><small>Título de la investigación</small><h3>Guía interactiva fisioterapéutica para la promoción de la salud y prevención de síntomas musculoesqueléticos en docentes</h3><p>Institución Educativa de Puerto Rico, Tiquisio, Bolívar</p></div></div></section>
 <section id="print"><div class="wrap"></div></section>
-<footer><div class="wrap">Guía elaborada como producto de la investigación «Diseño de una guía interactiva fisioterapéutica para la promoción de la salud y prevención de síntomas musculoesqueléticos en docentes de la Institución Educativa de Puerto Rico, Tiquisio, Bolívar». Material educativo; no reemplaza la valoración de un fisioterapeuta.</div></footer>
+<footer><div class="wrap"><b>Elaborado por:</b> Gesselly Rojas Díaz, Angies Milena Medina Ovallos y Juliana Llanos Pabón, estudiantes de IV semestre de Fisioterapia, Universidad de Pamplona.<br>Material educativo; no reemplaza la valoración de un fisioterapeuta.</div></footer>
 
 <script>
 var P={
@@ -133,19 +180,19 @@ cuello:'<circle class="hd" cx="60" cy="30" r="14"/><path d="M60 46v50M30 62h60M6
 body:'<circle class="hd" cx="60" cy="30" r="14"/><path d="M60 46v50M30 62h60M60 96l-14 50M60 96l14 50"/>'
 };
 var D=[
-{id:"cuello",n:"Cuello",d:"Alivia la tensión de la nuca, muy común al leer, corregir y usar el celular.",ex:[
+{id:"cuello",c:"#6c4ff0",n:"Cuello",d:"Alivia la tensión de la nuca, muy común al leer, corregir y usar el celular.",ex:[
 {t:"Inclinación lateral",dose:"2 series · 20 s por lado",sec:20,tip:"No subas el hombro hacia la oreja.",s:["Siéntate con la espalda recta y los hombros relajados.","Lleva la oreja derecha hacia el hombro derecho, sin girar la cara.","Mantén la posición y respira lento. Siente el estiramiento en el lado izquierdo del cuello.","Vuelve al centro y repite hacia el otro lado."]},
 {t:"Retracción cervical",dose:"10 repeticiones · 5 s",sec:5,tip:"Mira al frente; la barbilla baja un poco, no la cabeza.",s:["Siéntate con la espalda apoyada y la mirada al frente.","Lleva la cabeza hacia atrás, como si hicieras «doble mentón».","Mantén 5 segundos, sintiendo trabajar la parte profunda del cuello.","Suelta despacio y repite."]},
 {t:"Rotación suave",dose:"2 series · 15 s por lado",sec:15,tip:"El giro debe ser suave, sin forzar.",s:["Siéntate erguido con los hombros abajo.","Gira la cabeza hacia la derecha hasta sentir un estiramiento leve.","Mantén 15 segundos y respira.","Regresa al centro y gira hacia la izquierda."]}]},
-{id:"hombro",n:"Hombro",d:"Libera la parte alta de la espalda y el pecho, que se cierran al escribir o dar clase de pie.",ex:[
+{id:"hombro",c:"#e8503f",n:"Hombro",d:"Libera la parte alta de la espalda y el pecho, que se cierran al escribir o dar clase de pie.",ex:[
 {t:"Círculos de hombros",dose:"10 atrás · 10 adelante",sec:0,tip:"Haz los círculos grandes y lentos.",s:["Párate o siéntate con los brazos sueltos a los lados.","Sube los hombros hacia las orejas.","Llévalos hacia atrás y abajo, dibujando un círculo grande.","Repite 10 veces y luego 10 hacia adelante."]},
 {t:"Estiramiento cruzado del brazo",dose:"2 series · 20 s por brazo",sec:20,tip:"Sujeta el brazo por el codo, no por la muñeca.",s:["Lleva el brazo derecho estirado frente al pecho, cruzado.","Con la mano izquierda sujeta el brazo por encima del codo.","Acércalo suavemente al pecho y mantén 20 segundos.","Cambia de brazo."]},
 {t:"Apertura de pecho en el marco de la puerta",dose:"2 series · 20 s",sec:20,tip:"Mantén el abdomen firme para no arquear la espalda.",s:["Párate junto a un marco de puerta o una pared.","Apoya el antebrazo con el codo a la altura del hombro.","Da un paso pequeño adelante hasta sentir estiramiento en el pecho.","Mantén 20 segundos y cambia de lado."]}]},
-{id:"espalda",n:"Espalda baja",d:"Descarga la zona lumbar y fortalece el abdomen y los glúteos que la protegen.",ex:[
+{id:"espalda",c:"#0c8f72",n:"Espalda baja",d:"Descarga la zona lumbar y fortalece el abdomen y los glúteos que la protegen.",ex:[
 {t:"Rodillas al pecho",dose:"2 series · 20 s por pierna",sec:20,tip:"Mantén la cabeza apoyada y el cuello relajado.",s:["Acuéstate boca arriba con las rodillas dobladas.","Abraza una rodilla y llévala suavemente hacia el pecho.","Mantén 20 segundos respirando profundo.","Baja la pierna y repite con la otra."]},
 {t:"Gato y camello",dose:"10 repeticiones lentas",sec:0,tip:"Mueve solo hasta donde no duela.",s:["Colócate en cuatro apoyos: manos bajo los hombros y rodillas bajo la cadera.","Arquea la espalda hacia el techo y mira hacia el ombligo.","Baja el abdomen hacia el piso y mira al frente.","Alterna lentamente, siguiendo tu respiración."]},
 {t:"Puente de glúteos",dose:"2 series · 10 repeticiones",sec:5,tip:"Evita arquear la zona lumbar al subir.",s:["Acuéstate boca arriba, rodillas dobladas y pies apoyados.","Aprieta el abdomen y los glúteos.","Eleva la cadera hasta formar una línea entre hombros y rodillas; mantén 5 segundos.","Baja despacio, vértebra por vértebra."]}]},
-{id:"rodilla",n:"Rodillas",d:"Fortalece los músculos del muslo para proteger las articulaciones al estar de pie o caminar.",ex:[
+{id:"rodilla",c:"#1b74d1",n:"Rodillas",d:"Fortalece los músculos del muslo para proteger las articulaciones al estar de pie o caminar.",ex:[
 {t:"Extensión de rodilla sentado",dose:"10 repeticiones por pierna",sec:5,tip:"Contrae el muslo con fuerza al estirar.",s:["Siéntate en una silla con la espalda recta.","Estira una rodilla hasta dejar la pierna alineada.","Mantén 5 segundos apretando el muslo.","Baja lento y repite; luego cambia de pierna."]},
 {t:"Sentarse y pararse de la silla",dose:"2 series · 10 repeticiones",sec:0,tip:"Las rodillas siguen la dirección de los pies.",s:["Párate frente a una silla con los pies al ancho de la cadera.","Lleva la cadera hacia atrás y flexiona las rodillas como para sentarte.","Roza la silla sin dejarte caer.","Empuja con los talones y vuelve a pararte."]},
 {t:"Estiramiento de muslo de pie",dose:"2 series · 20 s por pierna",sec:20,tip:"Apóyate en una pared para mantener el equilibrio.",s:["Párate cerca de una pared y apóyate con una mano.","Dobla una rodilla llevando el talón hacia el glúteo.","Sujeta el tobillo y mantén las rodillas juntas durante 20 segundos.","Suelta y cambia de pierna."]}]}
@@ -155,9 +202,9 @@ var cur="cuello",done={};
 try{done=JSON.parse(localStorage.getItem("gdone")||"{}")}catch(e){}
 function save(){try{localStorage.setItem("gdone",JSON.stringify(done))}catch(e){}}
 function seg(){return D.filter(function(x){return x.id===cur})[0]}
-function tabs(){var h="";D.forEach(function(x){h+='<button class="tab" role="tab" aria-selected="'+(x.id===cur)+'" data-id="'+x.id+'">'+x.n+'</button>'});document.getElementById("tabs").innerHTML=h}
+function tabs(){var h="";D.forEach(function(x){h+='<button class="tab" style="--tc:'+x.c+'" role="tab" aria-selected="'+(x.id===cur)+'" data-id="'+x.id+'">'+x.n+'</button>'});document.getElementById("tabs").innerHTML=h}
 function prog(){var n=Object.keys(done).filter(function(k){return done[k]}).length;document.getElementById("pt").textContent=n+" de 12 ejercicios completados";document.getElementById("pb").style.width=(n/12*100)+"%"}
-function render(){stop();var s=seg();tabs();
+function render(){stop();var s=seg();document.documentElement.style.setProperty('--seg',s.c);tabs();
 document.getElementById("seg").innerHTML="<h3>"+s.n+"</h3><p>"+s.d+"</p>";
 var h="";s.ex.forEach(function(e,i){var k=s.id+i;
 h+='<div class="ex'+(done[k]?' done':'')+'" id="e'+k+'"><button class="exh" aria-expanded="false" data-k="'+k+'"><span class="ico"><svg viewBox="0 0 24 24">'+ICO[s.id]+'</svg></span><span><h3>'+e.t+'</h3><small>'+e.dose+'</small></span><span class="chev">▼</span></button>'+
@@ -176,6 +223,7 @@ el.querySelector('[data-a=prev]').disabled=n===0;el.querySelector('[data-a=next]
 var tm=null;
 document.addEventListener("click",function(ev){
 var t=ev.target.closest("button,.hot");if(!t)return;
+if(t.dataset.go){go(t.dataset.go);document.getElementById("ejercicios").scrollIntoView({behavior:"smooth"});return}
 if(t.classList.contains("tab")){cur=t.dataset.id;render();return}
 if(t.classList.contains("hot")){ev.preventDefault();go(t.dataset.s);return}
 if(t.classList.contains("exh")){var ex=t.parentNode,o=ex.classList.toggle("open");t.setAttribute("aria-expanded",o);if(o)play(t.dataset.k);else stop();return}
@@ -243,7 +291,12 @@ A.k=k;A.t=0;A.last=performance.now();A.pause=false;A.g=el.querySelector('.fig');
 var b=el.querySelector('[data-a=play]');if(b)b.textContent='Pausar';
 A.raf=requestAnimationFrame(frame)}
 
-(function(){var h='<h2>Contenido</h2><p class="lead">Toca el nombre de una zona para ir a sus ejercicios.</p><p>'+D.map(function(x){return '<a href="#p-'+x.id+'">'+x.n+'</a>'}).join(' | ')+'</p>';
+(function(){var G=D.concat([{n:"Para todo el cuerpo",c:"#14a3b8",ex:[{t:"Pausas activas para docentes",q:"pausas activas para docentes"},{t:"Higiene postural en el aula",q:"higiene postural docentes ergonomía"},{t:"Calentamiento antes de los ejercicios",q:"calentamiento articular suave fisioterapia"}]}]),v='';
+G.forEach(function(x){v+='<h3 class="vh" style="color:'+x.c+'">'+x.n+'</h3><div class="grid4 vid">';
+x.ex.forEach(function(e){var q=encodeURIComponent(e.q||(e.t+' '+x.n.toLowerCase()+' ejercicio fisioterapia'));
+v+='<a target="_blank" rel="noopener" style="--c:'+x.c+'" href="https://www.youtube.com/results?search_query='+q+'"><span class="play"></span><span><b>'+e.t+'</b><small>Ver videos en YouTube</small></span></a>'});v+='</div>'});
+document.getElementById('vids').innerHTML=v})();
+(function(){var h='<h1>¡Muévete, Profe!</h1><p>Gesselly Rojas Díaz · Angies Milena Medina Ovallos · Juliana Llanos Pabón<br>Estudiantes de IV semestre de Fisioterapia, Universidad de Pamplona</p><h2>Contenido</h2><p class="lead">Toca el nombre de una zona para ir a sus ejercicios.</p><p>'+D.map(function(x){return '<a href="#p-'+x.id+'">'+x.n+'</a>'}).join(' | ')+'</p>';
 D.forEach(function(x){h+='<div id="p-'+x.id+'" class="pg"><h2>'+x.n+'</h2><p class="lead">'+x.d+'</p>';x.ex.forEach(function(e,i){h+='<div class="pe"><h3>'+(i+1)+'. '+e.t+'</h3><p><b>'+e.dose+'</b></p><ol>'+e.s.map(function(s){return '<li>'+s+'</li>'}).join('')+'</ol><p class="tip">Consejo: '+e.tip+'</p></div>'});h+='<p><a href="#intro">Volver al inicio</a></p></div>'});
 document.querySelector('#print .wrap').innerHTML=h})();
 render();
